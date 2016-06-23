@@ -1,3 +1,10 @@
 ---
   classes:
     profiles::kickstartserver
+  wget_proxy::proxy_url: '' ##http://localhost:80
+  profiles::kickstartserver::distros:
+    - name: centos7-x86_64
+      iso_location: "http://mirrors.melbourne.co.uk/sites/ftp.centos.org/centos/7/isos/x86_64/CentOS-7-x86_64-Minimal-1511.iso"
+#    - name: centos6-x86_64
+#      iso_location: "http://mirror.vorboss.net/centos/6.8/isos/x86_64/CentOS-6.8-x86_64-minimal.iso"
+

@@ -1,0 +1,9 @@
+define wget_proxy::install(String source_location,
+String download_location,
+){
+ exec{$name:
+   path        => ['/bin']
+   environment => ["http_proxy=${proxy_url}", "https_proxy=${proxy_url}"]
+   cmd         => "wget ${source_location} -P ${download_location}",
+ }
+}
