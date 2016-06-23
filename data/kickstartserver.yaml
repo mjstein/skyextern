@@ -11,3 +11,13 @@
 
 
   profiles::dhcpserver::nameservers: ['10.0.1.20'] 
+  dhcp::pool:
+    'ops.dc1.example.net':
+      network: '10.0.2.0'
+      mask: '255.255.255.0'
+      range: '10.0.2.100 10.0.2.200'
+      gateway: '10.0.2.1'
+  dhcp::host: 
+    'server1':
+      mac: "00:50:56:00:00:01"
+      ip: "10.0.2.51"
