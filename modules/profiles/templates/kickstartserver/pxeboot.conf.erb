@@ -1,0 +1,7 @@
+Alias /<%=@distro['name']%> <%=@iso_mount_location%>
+<Directory <%=@iso_mount_location%>>
+Options Indexes FollowSymLinks
+Order Deny,Allow
+Deny from all
+Allow from all
+</Directory>

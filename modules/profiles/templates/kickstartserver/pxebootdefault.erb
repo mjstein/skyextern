@@ -1,0 +1,4 @@
+label <%=@distro['name']%>
+menu label ^1) Install <%=@distro['name']%>
+kernel <%=@distro['name']%>/images/pxeboot/vmlinuz
+append initrd=<%=@distro['name']%>/images/pxeboot/initrd.img method=http://<%=@networking['ip']%>/<%=@distro['name']%> devfs=nomount
