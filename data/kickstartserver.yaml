@@ -1,6 +1,7 @@
 ---
   classes:
-    profiles::kickstartserver
+    -  profiles::kickstartserver
+    -  profiles::dhcpserver
   wget_proxy::proxy_url: '' ##http://localhost:80
   profiles::kickstartserver::distros:
     - name: centos7-x86_64
@@ -8,3 +9,5 @@
 #    - name: centos6-x86_64
 #      iso_location: "http://mirror.vorboss.net/centos/6.8/isos/x86_64/CentOS-6.8-x86_64-minimal.iso"
 
+
+  profiles::dhcpserver::nameservers: ['10.0.1.20'] 
