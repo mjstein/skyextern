@@ -1,0 +1,9 @@
+---
+:backends:
+  - yaml
+  - json
+:yaml:
+  :datadir: "/home/vagrant/sync"
+:hierarchy:
+  - "data/kickstartserver"
+
